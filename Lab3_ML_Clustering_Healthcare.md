@@ -1,3 +1,13 @@
+# ML Clustering for Healthcare Scenario - Healthy Living and Wellness
+---
+**Author:** Saumya Padhi  
+**GitHub:** [https://github.com/saumyasam/Lab3_Healthcare_Clustering_ML.git](https://github.com/saumyasam/Lab3_Healthcare_Clustering_ML.git)  
+**Course:** MGT-665-NW Solv Probs W/ Machine Learning Graduate  
+**Institution:** DeVos Graduate School, Northwood University  
+**Instructor:** Dr. Itauma Itauma  
+**Date:** Jun 21st, 2025
+
+---
 # **Healthcare Patient Wellness Clustering Lab Report**
 
 ## **Abstract**
@@ -10,9 +20,9 @@ The contemporary healthcare landscape increasingly emphasizes preventative care 
 
 ## **Related Work**
 
-Clustering techniques have been widely applied in healthcare for various purposes, including patient stratification, disease subtyping, and healthcare resource optimization (e.g., Liu et al., 2020; Zhang et al., 2017). K-Means, a popular partitioning method, is known for its simplicity and computational efficiency, making it suitable for large datasets when the number of clusters is known or can be estimated (Jain, 2010). Hierarchical clustering, on the other hand, builds a hierarchy of clusters, offering flexibility in choosing the number of clusters post-analysis and visualizing cluster relationships through dendrograms (Everitt et al., 2011).
+Clustering techniques have been widely applied in healthcare for various purposes, including **patient stratification**, **disease subtyping**, and **healthcare resource optimization** (e.g., Liu et al., 2020; Zhang et al., 2017). **K-Means**, a popular partitioning method, is known for its simplicity and computational efficiency, making it suitable for large datasets when the number of clusters is known or can be estimated (Jain, 2010). **Hierarchical clustering**, on the other hand, builds a hierarchy of clusters, offering flexibility in choosing the number of clusters post-analysis and visualizing cluster relationships through dendrograms (Everitt et al., 2011).
 
-The challenge of high-dimensional healthcare data often necessitates dimensionality reduction techniques. PCA is a well-established linear transformation method that projects data onto a lower-dimensional space while retaining the maximum variance, thereby reducing noise and computational complexity for subsequent analyses like clustering (Abdi & Williams, 2010). Studies have shown that combining PCA with clustering can lead to more robust and interpretable results by mitigating the "curse of dimensionality" (e.g., Ding & He, 2004). This study builds upon these foundational applications by directly comparing clustering performance with and without PCA on a simulated patient wellness dataset to provide specific insights for a healthcare organization's healthy living programs.
+The challenge of high-dimensional healthcare data often necessitates **dimensionality reduction techniques**. **PCA** is a well-established linear transformation method that projects data onto a lower-dimensional space while retaining the maximum variance, thereby reducing noise and computational complexity for subsequent analyses like clustering (Abdi & Williams, 2010). Studies have shown that combining PCA with clustering can lead to more robust and interpretable results by mitigating the "curse of dimensionality" (e.g., Ding & He, 2004). This study builds upon these foundational applications by directly comparing clustering performance with and without PCA on a simulated patient wellness dataset to provide specific insights for a healthcare organization's healthy living programs.
 
 ## **Methodology**
 
@@ -107,7 +117,7 @@ From Table 1, several observations can be made:
 
 * **Silhouette Score:** K-Means on the original data had the highest Silhouette Score (0.3541), suggesting slightly better-defined clusters compared to other methods. Both PCA-based methods showed slightly lower Silhouette Scores (KMeans\_PCA: 0.3188, Agglo\_PCA: 0.3264).  
 * **Davies-Bouldin Index:** Both PCA-based methods achieved lower (better) Davies-Bouldin Index scores (KMeans\_PCA: 0.8174, Agglo\_PCA: 0.7914) compared to their non-PCA counterparts (KMeans: 0.9416, Agglo: 0.8633). This indicates that applying PCA generally led to clusters that are more separable and compact. Agglomerative Clustering with PCA yielded the lowest Davies-Bouldin Index, suggesting it produced the most distinct clusters among all methods.  
-* **WCSS:** The WCSS for KMeans\_PCA (124.5068) was significantly lower than for KMeans without PCA (581.5567). This is expected as PCA reduces the dimensionality, leading to smaller distances within clusters in the transformed space.
+* **WCSS:** The WCSS for KMeans\_PCA (124.5068) was significantly lower than for KMeans without `PCA (581.5567)`. This is expected as PCA reduces the dimensionality, leading to smaller distances within clusters in the transformed space.
 
 ### **Visualization of Clusters**
 
@@ -119,7 +129,7 @@ The results demonstrate the successful application of K-Means and Hierarchical C
 
 While K-Means on the original scaled data achieved a slightly higher Silhouette Score, indicating marginally better internal cohesion for individual clusters, the PCA-enhanced clustering methods consistently yielded lower Davies-Bouldin Index scores. A lower Davies-Bouldin Index signifies better clustering, characterized by clusters that are compact and well-separated from each other (Davies & Bouldin, 1979). This suggests that despite a minor trade-off in individual cluster cohesion (as indicated by the Silhouette Score), PCA contributed to more distinct and globally separated clusters, which can be highly beneficial for practical interventions. The reduced WCSS in KMeans\_PCA further supports the notion that dimensionality reduction helps create tighter clusters in the transformed space, enhancing computational efficiency and potentially simplifying interpretability of the clusters themselves.
 
-Implications for Healthcare Organization:  
+### **Implications for Healthcare Organization:**
 Clustering patients into distinct wellness profiles offers significant advantages for the healthcare organization:
 
 1. **Targeted Health Interventions:** By identifying different patient segments, the organization can tailor healthy living programs to the specific needs and behaviors of each group. For example:  
@@ -133,7 +143,7 @@ Clustering patients into distinct wellness profiles offers significant advantage
 
 The use of PCA not only aids in computational efficiency but also helps in interpreting the underlying factors contributing to patient wellness. The principal components represent combinations of the original features, which, once interpreted, can provide a more abstract and powerful understanding of the dimensions along which patients vary in their wellness profiles.
 
-Limitations:  
+### **Limitations:**  
 This study utilized a simulated dataset. While it provides a valuable framework for analysis, real-world patient data may exhibit more complexity, noise, and missing values, requiring more extensive preprocessing and potentially different modeling approaches. The interpretability of PCA components can also be challenging if they do not align clearly with known clinical concepts. Furthermore, the selection of the optimal number of clusters, while guided by the Elbow method and dendrograms, still involves a degree of subjectivity.
 
 ## **Conclusion**
@@ -153,10 +163,6 @@ Ding, C., & He, X. (2004). K-means clustering and principal component analysis. 
 Everitt, B. S., Landau, S., Leese, M., & Stahl, D. (2011). *Cluster analysis* (5th ed.). John Wiley & Sons.
 
 Jain, A. K. (2010). Data clustering: 50 years beyond K-means. *Pattern Recognition Letters*, *31*(8), 651-666.
-
-Lab3\_Healthcare\_Clustering\_Sam.pdf. (n.d.). *Lab3\_Healthcare\_Clustering\_Sam*. \[PDF document provided by user\].
-
-Lab3\_Healthcare\_Clustering\_Sam\_v1.0.ipynb. (n.d.). *Lab3\_Healthcare\_Clustering\_Sam\_v1.0*. \[Jupyter Notebook provided by user\].
 
 Liu, S., Zhang, S., Li, Y., & Li, R. (2020). Patient clustering based on electronic health records using deep autoencoder. *BMC Medical Informatics and Decision Making*, *20*(1), 1-11.
 
